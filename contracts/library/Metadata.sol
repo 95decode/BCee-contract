@@ -3,6 +3,8 @@ pragma solidity ^0.8.17;
 
 import "./Base64.sol";
 import "./Strings2.sol";
+import "./image/Background.sol";
+import "./image/Body.sol";
 
 library Metadata {
     struct Trait {
@@ -42,7 +44,7 @@ library Metadata {
                     ",\"image\":\"",
                     "data:image/svg+xml;base64,",
                     Base64.encode(
-                        constructSvg()
+                        constructSvg(seed)
                     ),
                     "\"}"
                 )
@@ -50,11 +52,15 @@ library Metadata {
         );
     }
 
-    function constructSvg() internal pure returns (string memory) {
+    function constructSvg(uint256 seed) internal pure returns (string memory) {
+        string memory SVG_PREFIX = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" shape-rendering=\"crispEdges\">";
+        string memory SVG_SUFFIX = "</svg>";
+
         return string.concat(
-            "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
-            "<path stroke=\"#939393\" d=\"M6 5h1\" />",
-            "</svg>"
+            SVG_PREFIX,
+            Background.constructBackgorund(seed),
+            Body.constructBody(seed),
+            SVG_SUFFIX
         );
     }
 
