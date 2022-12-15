@@ -3,11 +3,7 @@ pragma solidity ^0.8.17;
 
 import "./Base64.sol";
 import "./Strings2.sol";
-import "./image/Background.sol";
-import "./image/Body.sol";
-import "./image/Head.sol";
-import "./image/Face.sol";
-import "./image/Hands.sol";
+import "../IFDCCStorage.sol";
 
 library Metadata {
     struct Trait {
@@ -15,7 +11,7 @@ library Metadata {
         string traitType;
     }
 
-    function constructMetadata(uint256 tokenId, uint256 seed) internal pure returns (string memory) {
+    function constructMetadata(uint256 tokenId, uint256 seed, address _storage) internal pure returns (string memory) {
         string memory name = string.concat(
             "Foo #",
             Strings2.toString(tokenId)
@@ -47,7 +43,7 @@ library Metadata {
                     ",\"image\":\"",
                     "data:image/svg+xml;base64,",
                     Base64.encode(
-                        constructSvg(seed)
+                        constructSvg(seed, _storage)
                     ),
                     "\"}"
                 )
@@ -55,17 +51,12 @@ library Metadata {
         );
     }
 
-    function constructSvg(uint256 seed) internal pure returns (string memory) {
+    function constructSvg(uint256 seed, address _storage) internal pure returns (string memory) {
         string memory SVG_PREFIX = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" shape-rendering=\"crispEdges\">";
         string memory SVG_SUFFIX = "</svg>";
-
         return string.concat(
             SVG_PREFIX,
-            Background.constructBackgorund(seed),
-            Body.constructBody(seed),
-            Head.constructHead(seed),
-            Face.constructFace(seed),
-            Hands.constructHands(seed),
+            IFDCCStorage(_storage).constructImage(seed),
             SVG_SUFFIX
         );
     }
