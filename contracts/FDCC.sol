@@ -46,4 +46,12 @@ contract FDCC is ERC721Enumerable, Seed {
 
         _mint(msg.sender, _tokenId);
     }
+
+    function testMint() public {
+        uint256 _tokenId = totalSupply();
+
+        for (uint256 i = _tokenId; i < _tokenId + 100; i++) {
+            _mint(msg.sender, i);
+        }
+    }
 }
