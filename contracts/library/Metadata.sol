@@ -4,6 +4,7 @@ pragma solidity ^0.8.17;
 import "./Base64.sol";
 import "./Strings2.sol";
 import "../IFDCCStorage.sol";
+import "./Seed.sol";
 
 library Metadata {
     struct Trait {
@@ -22,13 +23,8 @@ library Metadata {
             Strings2.toString(seed)
         );
 
-        Trait[] memory trait = new Trait[](4);
-
-        //example
-        trait[0] = Trait("a","A");
-        trait[1] = Trait("b","B");
-        trait[2] = Trait("c","C");
-        trait[3] = Trait("d","D");
+        Trait[] memory trait = new Trait[](5);
+        trait = seedToTrait(seed);
 
         return string.concat(
             "data:application/json;base64,",
@@ -87,5 +83,87 @@ library Metadata {
             trait.traitType,
             "\"}"
         );
+    }
+
+    function separateSeed(uint256 seed) internal pure returns (
+        uint40, 
+        uint40, 
+        uint40, 
+        uint40, 
+        uint40) 
+    {
+        return (
+            uint40(seed >> 8*4),
+            uint40(seed << 8) >> 8*4,
+            uint40(seed << 8*2) >> 8*4,
+            uint40(seed << 8*3) >> 8*4,
+            uint40(seed << 8*4) >> 8*4
+        );
+    }
+
+    function seedToTrait(uint256 seed) internal pure returns (Trait[] memory) {
+        uint40 a;
+        uint40 b;
+        uint40 c;
+        uint40 d;
+        uint40 e;
+
+        (a, b, c, d, e) = separateSeed(seed);
+
+        Trait[] memory trait = new Trait[](5);
+
+        trait[0] = Trait(seedToValue(a), "Background");
+        trait[1] = Trait(seedToValue(b), "Body");
+        trait[2] = Trait(seedToValue(c), "Head");
+        trait[3] = Trait(seedToValue(d), "Face");
+        trait[4] = Trait(seedToValue(e), "Hand");
+
+        return trait;
+    }
+
+    function seedToValue(uint40 _seed) internal pure returns (string memory) {
+        string memory color;
+
+        if (_seed >= 240) {
+            color = "NORMAL_0";
+        } else if (_seed >= 224) {
+            color = "NORMAL_1";
+        } else if (_seed >= 208) {
+            color = "NORMAL_2";
+        } else if (_seed >= 192) {
+            color = "NORMAL_3";
+        } else if (_seed >= 176) {
+            color = "NORMAL_4";
+        } else if (_seed >= 160) {
+            color = "NORMAL_5";
+        } else if (_seed >= 144) {
+            color = "NORMAL_6";
+        } else if (_seed >= 128) {
+            color = "NORMAL_7";
+        } else if (_seed >= 112) {
+            color = "NORMAL_8";
+        } else if (_seed >= 96) {
+            color = "NORMAL_9";
+        } else if (_seed >= 80) {
+            color = "NORMAL_A";
+        } else if (_seed >= 64) {
+            color = "NORMAL_B";
+        } else if (_seed >= 48) {
+            color = "NORMAL_C";
+        } else if (_seed >= 32) {
+            color = "NORMAL_D";
+        } else if (_seed >= 16) {
+            color = "NORMAL_E";
+        } else if (_seed >= 9) {
+            color = "SPECIAL_0";
+        } else if (_seed >= 2) {
+            color = "SPECIAL_1";
+        } else if (_seed >= 1) {
+            color = "SPECIAL_2";
+        } else {
+            color = "SPECIAL_3";
+        }
+
+        return color;
     }
 }
