@@ -3,7 +3,6 @@ pragma solidity ^0.8.17;
 
 import "./Converter.sol";
 import "../IFDCCStorage.sol";
-import "./Seed.sol";
 import "./TraitChecker.sol";
 
 library Metadata {

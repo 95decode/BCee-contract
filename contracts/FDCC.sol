@@ -16,9 +16,8 @@ __/\\\\\\\\\\\\\\\_        __/\\\\\\\\\\\\____        ________/\\\\\\\\\_       
 */
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
-import "./library/Base64.sol";
-import "./library/Metadata.sol";
 import "./library/Seed.sol";
+import "./library/Metadata.sol";
 
 contract FDCC is ERC721Enumerable, Seed {
     address internal immutable deployer;
