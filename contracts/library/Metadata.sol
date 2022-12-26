@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import "./Base64.sol";
-import "./Strings2.sol";
+import "./Converter.sol";
 import "../IFDCCStorage.sol";
 import "./Seed.sol";
 import "./TraitChecker.sol";
@@ -16,12 +15,12 @@ library Metadata {
     function constructMetadata(uint256 tokenId, uint256 seed, address _storage) internal pure returns (string memory) {
         string memory name = string.concat(
             "Foo #",
-            Strings2.toString(tokenId)
+            Converter.toString(tokenId)
         );
 
         string memory description = string.concat(
             "seed : ",
-            Strings2.toString(seed)
+            Converter.toString(seed)
         );
 
         Trait[] memory trait = new Trait[](5);
@@ -29,7 +28,7 @@ library Metadata {
 
         return string.concat(
             "data:application/json;base64,",
-            Base64.encode(
+            Converter.encode(
                 string.concat(
                     "{\"name\":\"",
                     name,
@@ -39,7 +38,7 @@ library Metadata {
                     constructAttributes(trait),
                     ",\"image\":\"",
                     "data:image/svg+xml;base64,",
-                    Base64.encode(
+                    Converter.encode(
                         constructSvg(seed, _storage)
                     ),
                     "\"}"
