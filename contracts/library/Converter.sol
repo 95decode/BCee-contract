@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import "./Math.sol";
+import "./Logarithm.sol";
 
 library Converter {
     string internal constant _TABLE = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
@@ -9,7 +9,7 @@ library Converter {
 
     function toString(uint256 value) internal pure returns (string memory) {
         unchecked {
-            uint256 length = Math.log10(value) + 1;
+            uint256 length = Logarithm.log10(value) + 1;
             string memory buffer = new string(length);
             uint256 ptr;
             

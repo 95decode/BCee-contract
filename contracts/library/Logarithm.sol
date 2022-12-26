@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-library Math {
+library Logarithm {
     function log10(uint256 value) internal pure returns (uint256) {
         uint256 result = 0;
         unchecked {
