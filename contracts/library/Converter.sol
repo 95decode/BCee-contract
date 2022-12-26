@@ -1,17 +1,34 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-/**
- * @dev Provides a set of functions to operate with Base64 strings.
- *
- * _Available since v4.5._
- */
-library Base64 {
-    /**
-     * @dev Base64 Encoding/Decoding Table
-     */
+import "./Math.sol";
+
+library Converter {
     string internal constant _TABLE = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-    
+    bytes16 private constant _SYMBOLS = "0123456789abcdef";
+
+    function toString(uint256 value) internal pure returns (string memory) {
+        unchecked {
+            uint256 length = Math.log10(value) + 1;
+            string memory buffer = new string(length);
+            uint256 ptr;
+            
+            assembly {
+                ptr := add(buffer, add(32, length))
+            }
+            while (true) {
+                ptr--;
+                
+                assembly {
+                    mstore8(ptr, byte(mod(value, 10), _SYMBOLS))
+                }
+                value /= 10;
+                if (value == 0) break;
+            }
+            return buffer;
+        }
+    }
+
     /**
      * @dev Converts a `bytes` to its Bytes64 `string` representation.
      */
@@ -92,6 +109,6 @@ library Base64 {
     function encode(string memory data) internal pure returns (string memory) {
         bytes memory _data = bytes(data);
         
-        return Base64.encode(_data);
+        return Converter.encode(_data);
     }
 }
