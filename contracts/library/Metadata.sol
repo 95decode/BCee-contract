@@ -5,6 +5,7 @@ import "./Base64.sol";
 import "./Strings2.sol";
 import "../IFDCCStorage.sol";
 import "./Seed.sol";
+import "./TraitChecker.sol";
 
 library Metadata {
     struct Trait {
@@ -112,58 +113,12 @@ library Metadata {
 
         Trait[] memory trait = new Trait[](5);
 
-        trait[0] = Trait(seedToValue(a), "Background");
-        trait[1] = Trait(seedToValue(b), "Body");
-        trait[2] = Trait(seedToValue(c), "Head");
-        trait[3] = Trait(seedToValue(d), "Face");
-        trait[4] = Trait(seedToValue(e), "Hand");
+        trait[0] = Trait(TraitChecker.seedToBackground(a), "Background");
+        trait[1] = Trait(TraitChecker.seedToBody(b), "Body");
+        trait[2] = Trait(TraitChecker.seedToHead(c), "Head");
+        trait[3] = Trait(TraitChecker.seedToFace(d), "Face");
+        trait[4] = Trait(TraitChecker.seedToHands(e), "Hands");
 
         return trait;
-    }
-
-    function seedToValue(uint40 _seed) internal pure returns (string memory) {
-        string memory color;
-
-        if (_seed >= 240) {
-            color = "NORMAL_0";
-        } else if (_seed >= 224) {
-            color = "NORMAL_1";
-        } else if (_seed >= 208) {
-            color = "NORMAL_2";
-        } else if (_seed >= 192) {
-            color = "NORMAL_3";
-        } else if (_seed >= 176) {
-            color = "NORMAL_4";
-        } else if (_seed >= 160) {
-            color = "NORMAL_5";
-        } else if (_seed >= 144) {
-            color = "NORMAL_6";
-        } else if (_seed >= 128) {
-            color = "NORMAL_7";
-        } else if (_seed >= 112) {
-            color = "NORMAL_8";
-        } else if (_seed >= 96) {
-            color = "NORMAL_9";
-        } else if (_seed >= 80) {
-            color = "NORMAL_A";
-        } else if (_seed >= 64) {
-            color = "NORMAL_B";
-        } else if (_seed >= 48) {
-            color = "NORMAL_C";
-        } else if (_seed >= 32) {
-            color = "NORMAL_D";
-        } else if (_seed >= 16) {
-            color = "NORMAL_E";
-        } else if (_seed >= 9) {
-            color = "SPECIAL_0";
-        } else if (_seed >= 2) {
-            color = "SPECIAL_1";
-        } else if (_seed >= 1) {
-            color = "SPECIAL_2";
-        } else {
-            color = "SPECIAL_3";
-        }
-
-        return color;
     }
 }
