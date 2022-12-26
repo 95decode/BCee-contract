@@ -1,16 +1,7 @@
 // SPDX-License-Identifier: MIT
-// OpenZeppelin Contracts (last updated v4.8.0) (utils/math/Math.sol)
-
 pragma solidity ^0.8.17;
 
-/**
- * @dev Standard math utilities missing in the Solidity language.
- */
-library Log10 {
-    /**
-     * @dev Return the log in base 10, rounded down, of a positive value.
-     * Returns 0 if given 0.
-     */
+library Math {
     function log10(uint256 value) internal pure returns (uint256) {
         uint256 result = 0;
         unchecked {
