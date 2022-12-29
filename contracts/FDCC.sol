@@ -23,7 +23,7 @@ contract FDCC is ERC721Enumerable, Seed {
     address internal immutable deployer;
     address internal immutable FDCCStorage;
 
-    constructor(bytes memory salt, address _storage) ERC721("test", "test") Seed(salt) {
+    constructor(bytes32 salt, address _storage) ERC721("test", "test") Seed(salt) {
         deployer = msg.sender;
         FDCCStorage = _storage;
         _initialize();

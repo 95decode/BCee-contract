@@ -2,9 +2,9 @@
 pragma solidity ^0.8.17;
 
 contract Seed {
-    bytes private _salt;
+    bytes32 private _salt;
 
-    constructor(bytes memory salt) {
+    constructor(bytes32 salt) {
         _salt = salt;
     }
 
