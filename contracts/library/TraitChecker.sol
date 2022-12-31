@@ -4,45 +4,45 @@ pragma solidity ^0.8.17;
 library TraitChecker {
     function seedToBackground(uint40 _seed) internal pure returns (string memory) {
         if (_seed >= 206) {
-            return "NORMAL_0";
+            return "None";
         } else if (_seed >= 190) {
-            return "NORMAL_1";
+            return "Gray";
         } else if (_seed >= 174) {
-            return "NORMAL_2";
+            return "Orange";
         } else if (_seed >= 158) {
-            return "NORMAL_3";
+            return "Green";
         } else if (_seed >= 142) {
-            return "NORMAL_4";
+            return "Blue";
         } else if (_seed >= 126) {
-            return "NORMAL_5";
+            return "Red";
         } else if (_seed >= 110) {
-            return "NORMAL_6";
+            return "Sky Blue";
         } else if (_seed >= 94) {
-            return "NORMAL_7";
+            return "Violet";
         } else if (_seed >= 78) {
-            return "NORMAL_8";
+            return "Half Yellow";
         } else if (_seed >= 62) {
-            return "NORMAL_9";
+            return "Half Pink";
         } else if (_seed >= 46) {
-            return "NORMAL_A";
+            return "Half Violet";
         } else if (_seed >= 30) {
-            return "NORMAL_B";
+            return "Gradient Pink";
         } else if (_seed >= 14) {
-            return "NORMAL_C";
+            return "Gradient Blue";
         } else if (_seed >= 10) {
-            return "NORMAL_D";
+            return "Special Gray";
         } else if (_seed >= 8) {
-            return "NORMAL_E";
+            return "Spiral Red";
         } else if (_seed >= 6) {
-            return "NORMAL_F";
+            return "Spiral Violet";
         } else if (_seed >= 4) {
-            return "SPECIAL_0";
+            return "Polka Dot Green";
         } else if (_seed >= 2) {
-            return "SPECIAL_1";
+            return "Polka Dot Blue";
         } else if (_seed >= 1) {
-            return "SPECIAL_2";
+            return "Galaxy";
         } else {
-            return "SPECIAL_3";
+            return "Confetti";
         }
     }
 
