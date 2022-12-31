@@ -33,7 +33,7 @@ library Head {
         if (_seed >= 240) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_0
+                NORMAL_1
             );
         } else if (_seed >= 224) {
             return string.concat(
@@ -73,57 +73,57 @@ library Head {
         } else if (_seed >= 112) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_8
+                NORMAL_1
             );
         } else if (_seed >= 96) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_9
+                NORMAL_1
             );
         } else if (_seed >= 80) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_A
+                NORMAL_1
             );
         } else if (_seed >= 64) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_B
+                NORMAL_1
             );
         } else if (_seed >= 48) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_C
+                NORMAL_1
             );
         } else if (_seed >= 32) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_D
+                NORMAL_1
             );
         } else if (_seed >= 16) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_E
+                NORMAL_1
             );
         } else if (_seed >= 9) {
             return string.concat(
                 Prefix.prefix(), 
-                SPECIAL_0
+                NORMAL_1
             );
         } else if (_seed >= 2) {
             return string.concat(
                 Prefix.prefix(), 
-                SPECIAL_1
+                NORMAL_1
             );
         } else if (_seed >= 1) {
             return string.concat(
                 Prefix.prefix(), 
-                SPECIAL_2
+                NORMAL_1
             );
         } else {
             return string.concat(
                 Prefix.prefix(), 
-                SPECIAL_3
+                NORMAL_1
             );
         }
     }

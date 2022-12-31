@@ -75,37 +75,37 @@ library Face {
         } else if (_seed >= 112) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_8
+                NORMAL_7
             );
         } else if (_seed >= 96) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_9
+                NORMAL_7
             );
         } else if (_seed >= 80) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_A
+                NORMAL_7
             );
         } else if (_seed >= 64) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_B
+                NORMAL_7
             );
         } else if (_seed >= 48) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_C
+                NORMAL_7
             );
         } else if (_seed >= 32) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_D
+                NORMAL_7
             );
         } else if (_seed >= 16) {
             return string.concat(
                 Prefix.prefix(), 
-                NORMAL_E
+                NORMAL_7
             );
         } else if (_seed >= 9) {
             return string.concat(

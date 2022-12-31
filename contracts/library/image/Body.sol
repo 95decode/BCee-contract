@@ -17,18 +17,18 @@ library Body {
     string constant internal NORMAL_6 = "FFFFFF";
     string constant internal NORMAL_7 = "FFF200";
 
-    string constant internal NORMAL_8 = "";
-    string constant internal NORMAL_9 = "";
-    string constant internal NORMAL_A = "";
-    string constant internal NORMAL_B = "";
-    string constant internal NORMAL_C = "";
-    string constant internal NORMAL_D = "";
-    string constant internal NORMAL_E = "";
+    string constant internal NORMAL_8 = "FFF200";
+    string constant internal NORMAL_9 = "FFF200";
+    string constant internal NORMAL_A = "FFF200";
+    string constant internal NORMAL_B = "FFF200";
+    string constant internal NORMAL_C = "FFF200";
+    string constant internal NORMAL_D = "FFF200";
+    string constant internal NORMAL_E = "FFF200";
 
-    string constant internal SPECIAL_0 = "";
-    string constant internal SPECIAL_1 = "";
-    string constant internal SPECIAL_2 = "";
-    string constant internal SPECIAL_3 = "";
+    string constant internal SPECIAL_0 = "FFF200";
+    string constant internal SPECIAL_1 = "FFF200";
+    string constant internal SPECIAL_2 = "FFF200";
+    string constant internal SPECIAL_3 = "FFF200";
 
     function constructBody(uint256 seed) internal pure returns (string memory) {
         uint40 _seed = uint40(seed << 8);
