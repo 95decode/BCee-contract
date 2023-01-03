@@ -30,7 +30,7 @@ library TraitChecker {
         } else if (_seed >= 14) {
             return "Gradient Blue";
         } else if (_seed >= 10) {
-            return "Special Gray";
+            return "Spiral Gray";
         } else if (_seed >= 8) {
             return "Spiral Red";
         } else if (_seed >= 6) {
@@ -47,44 +47,34 @@ library TraitChecker {
     }
 
     function seedToBody(uint40 _seed) internal pure returns (string memory) {
-        if (_seed >= 240) {
-            return "NORMAL_0";
-        } else if (_seed >= 224) {
-            return "NORMAL_1";
+        if (_seed >= 232) {
+            return "";
         } else if (_seed >= 208) {
-            return "NORMAL_2";
-        } else if (_seed >= 192) {
-            return "NORMAL_3";
-        } else if (_seed >= 176) {
-            return "NORMAL_4";
+            return "";
+        } else if (_seed >= 184) {
+            return "";
         } else if (_seed >= 160) {
-            return "NORMAL_5";
-        } else if (_seed >= 144) {
-            return "NORMAL_6";
-        } else if (_seed >= 128) {
-            return "NORMAL_7";
+            return "";
+        } else if (_seed >= 136) {
+            return "";
         } else if (_seed >= 112) {
-            return "NORMAL_8";
-        } else if (_seed >= 96) {
-            return "NORMAL_9";
-        } else if (_seed >= 80) {
-            return "NORMAL_A";
+            return "";
+        } else if (_seed >= 88) {
+            return "";
         } else if (_seed >= 64) {
-            return "NORMAL_B";
-        } else if (_seed >= 48) {
-            return "NORMAL_C";
-        } else if (_seed >= 32) {
-            return "NORMAL_D";
+            return "";
+        } else if (_seed >= 40) {
+            return "";
         } else if (_seed >= 16) {
-            return "NORMAL_E";
-        } else if (_seed >= 9) {
-            return "SPECIAL_0";
-        } else if (_seed >= 2) {
-            return "SPECIAL_1";
-        } else if (_seed >= 1) {
-            return "SPECIAL_2";
+            return "";
+        } else if (_seed >= 12) {
+            return "";
+        } else if (_seed >= 8) {
+            return "";
+        } else if (_seed >= 4) {
+            return "";
         } else {
-            return "SPECIAL_3";
+            return "";
         }
     }
 
