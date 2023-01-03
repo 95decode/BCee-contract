@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import "./IFDCCStorage.sol";
+import "./IBCeeRenderer.sol";
 
 import "./library/image/Background.sol";
 import "./library/image/Body.sol";
@@ -9,7 +9,7 @@ import "./library/image/Head.sol";
 import "./library/image/Face.sol";
 import "./library/image/Hands.sol";
 
-contract FDCCStorage is IFDCCStorage {
+contract BCeeRenderer is IBCeeRenderer {
     constructor(){}
 
     function constructImage(uint256 seed) external pure returns (string memory) {

@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
+import "../IBCeeRenderer.sol";
 import "./Converter.sol";
-import "../IFDCCStorage.sol";
 import "./TraitChecker.sol";
 
 library Metadata {
@@ -11,9 +11,9 @@ library Metadata {
         string traitType;
     }
 
-    function constructMetadata(uint256 tokenId, uint256 seed, address _storage) internal pure returns (string memory) {
+    function constructMetadata(uint256 tokenId, uint256 seed, address renderer) internal pure returns (string memory) {
         string memory name = string.concat(
-            "Foo #",
+            "BCee #",
             Converter.toString(tokenId)
         );
 
@@ -38,7 +38,7 @@ library Metadata {
                     ",\"image\":\"",
                     "data:image/svg+xml;base64,",
                     Converter.encode(
-                        constructSvg(seed, _storage)
+                        constructSvg(seed, renderer)
                     ),
                     "\"}"
                 )
@@ -46,12 +46,12 @@ library Metadata {
         );
     }
 
-    function constructSvg(uint256 seed, address _storage) internal pure returns (string memory) {
+    function constructSvg(uint256 seed, address renderer) internal pure returns (string memory) {
         string memory SVG_PREFIX = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" shape-rendering=\"crispEdges\">";
         string memory SVG_SUFFIX = "</svg>";
         return string.concat(
             SVG_PREFIX,
-            IFDCCStorage(_storage).constructImage(seed),
+            IBCeeRenderer(renderer).constructImage(seed),
             SVG_SUFFIX
         );
     }
@@ -84,13 +84,7 @@ library Metadata {
         );
     }
 
-    function separateSeed(uint256 seed) internal pure returns (
-        uint40, 
-        uint40, 
-        uint40, 
-        uint40, 
-        uint40) 
-    {
+    function separateSeed(uint256 seed) internal pure returns (uint40, uint40, uint40, uint40, uint40) {
         return (
             uint40(seed >> 8*4),
             uint40(seed << 8) >> 8*4,
@@ -101,21 +95,20 @@ library Metadata {
     }
 
     function seedToTrait(uint256 seed) internal pure returns (Trait[] memory) {
-        uint40 a;
-        uint40 b;
-        uint40 c;
-        uint40 d;
-        uint40 e;
-
-        (a, b, c, d, e) = separateSeed(seed);
-
+        uint40 background;
+        uint40 body;
+        uint40 head;
+        uint40 face;
+        uint40 hands;
+        
         Trait[] memory trait = new Trait[](5);
 
-        trait[0] = Trait(TraitChecker.seedToBackground(a), "Background");
-        trait[1] = Trait(TraitChecker.seedToBody(b), "Body");
-        trait[2] = Trait(TraitChecker.seedToHead(c), "Head");
-        trait[3] = Trait(TraitChecker.seedToFace(d), "Face");
-        trait[4] = Trait(TraitChecker.seedToHands(e), "Hands");
+        (background, body, head, face, hands) = separateSeed(seed);
+        trait[0] = Trait(TraitChecker.seedToBackground(background), "Background");
+        trait[1] = Trait(TraitChecker.seedToBody(body), "Body");
+        trait[2] = Trait(TraitChecker.seedToHead(head), "Head");
+        trait[3] = Trait(TraitChecker.seedToFace(face), "Face");
+        trait[4] = Trait(TraitChecker.seedToHands(hands), "Hands");
 
         return trait;
     }
