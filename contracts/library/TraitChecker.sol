@@ -48,33 +48,33 @@ library TraitChecker {
 
     function seedToBody(uint40 _seed) internal pure returns (string memory) {
         if (_seed >= 232) {
-            return "";
+            return "Beige";
         } else if (_seed >= 208) {
-            return "";
+            return "Yellow";
         } else if (_seed >= 184) {
-            return "";
+            return "White";
         } else if (_seed >= 160) {
-            return "";
+            return "Violet";
         } else if (_seed >= 136) {
-            return "";
+            return "Gray";
         } else if (_seed >= 112) {
-            return "";
+            return "Green";
         } else if (_seed >= 88) {
-            return "";
+            return "Brown";
         } else if (_seed >= 64) {
-            return "";
+            return "Pink";
         } else if (_seed >= 40) {
-            return "";
+            return "Red";
         } else if (_seed >= 16) {
-            return "";
+            return "Purple";
         } else if (_seed >= 12) {
-            return "";
+            return "Mutant";
         } else if (_seed >= 8) {
-            return "";
+            return "Gray Stripes";
         } else if (_seed >= 4) {
-            return "";
+            return "Yellow Stripes";
         } else {
-            return "";
+            return "???";
         }
     }
 
