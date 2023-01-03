@@ -66,11 +66,17 @@ library Background {
         } else if (_seed >= 10) {
             return string.concat(
                 PREFIX,
+                NONE,
+                SUFFIX,
+                PREFIX,
                 SPIRAL_GRAY,
                 SPIRAL_SUFFIX
             );
         } else if (_seed >= 8) {
             return string.concat(
+                PREFIX,
+                NONE,
+                SUFFIX,
                 PREFIX,
                 SPIRAL_RED,
                 SPIRAL_SUFFIX
@@ -78,17 +84,40 @@ library Background {
         } else if (_seed >= 6) {
             return string.concat(
                 PREFIX,
+                NONE,
+                SUFFIX,
+                PREFIX,
                 SPIRAL_VIOLET,
                 SPIRAL_SUFFIX
             );
         } else if (_seed >= 4) {
-            return POLKADOT_GREEN;
+            return string.concat(
+                PREFIX,
+                NONE,
+                SUFFIX,
+                POLKADOT_GREEN
+            );
         } else if (_seed >= 2) {
-            return POLKADOT_BLUE;
+            return string.concat(
+                PREFIX,
+                NONE,
+                SUFFIX,
+                POLKADOT_BLUE
+            );
         } else if (_seed >= 1) {
-            return GALAXY;
+            return string.concat(
+                PREFIX,
+                NONE,
+                SUFFIX,
+                GALAXY
+            );
         } else {
-            return CONFETTI;
+            return string.concat(
+                PREFIX,
+                NONE,
+                SUFFIX,
+                CONFETTI
+            );
         }
 
         return string.concat(
