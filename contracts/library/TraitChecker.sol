@@ -121,44 +121,30 @@ library TraitChecker {
     }
 
     function seedToFace(uint40 _seed) internal pure returns (string memory) {
-        if (_seed >= 240) {
-            return "NORMAL_0";
-        } else if (_seed >= 224) {
-            return "NORMAL_1";
-        } else if (_seed >= 208) {
-            return "NORMAL_2";
-        } else if (_seed >= 192) {
-            return "NORMAL_3";
-        } else if (_seed >= 176) {
-            return "NORMAL_4";
-        } else if (_seed >= 160) {
-            return "NORMAL_5";
-        } else if (_seed >= 144) {
-            return "NORMAL_6";
-        } else if (_seed >= 128) {
-            return "NORMAL_7";
-        } else if (_seed >= 112) {
-            return "NORMAL_8";
-        } else if (_seed >= 96) {
-            return "NORMAL_9";
-        } else if (_seed >= 80) {
-            return "NORMAL_A";
-        } else if (_seed >= 64) {
-            return "NORMAL_B";
-        } else if (_seed >= 48) {
-            return "NORMAL_C";
-        } else if (_seed >= 32) {
-            return "NORMAL_D";
+        if (_seed >= 226) {
+            return "Normal eyes #0";
+        } else if (_seed >= 196) {
+            return "Normal eyes #1";
+        } else if (_seed >= 166) {
+            return "Normal eyes #2";
+        } else if (_seed >= 136) {
+            return "Normal eyes #3";
+        } else if (_seed >= 106) {
+            return "Injured eyes";
+        } else if (_seed >= 86) {
+            return "Mismatched eyes";
+        } else if (_seed >= 66) {
+            return "Gray sunglasses";
+        } else if (_seed >= 46) {
+            return "3D sunglasses";
+        } else if (_seed >= 26) {
+            return "Goggles";
         } else if (_seed >= 16) {
-            return "NORMAL_E";
-        } else if (_seed >= 9) {
-            return "SPECIAL_0";
-        } else if (_seed >= 2) {
-            return "SPECIAL_1";
-        } else if (_seed >= 1) {
-            return "SPECIAL_2";
+            return "Error";
+        } else if (_seed >= 6) {
+            return "Blue sunglasses";
         } else {
-            return "SPECIAL_3";
+            return "Black eyes";
         }
     }
 
