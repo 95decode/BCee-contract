@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import "./Prefix.sol";
-
 library Head {
     string constant internal NONE = " ";
     string constant internal THIN = "<path stroke=\"#000000\" d=\"M15 3h1M10 4h2M15 4h1M20 4h2M11 5h2M15 5h2M19 5h2M12 6h2M16 6h1M19 6h1M24 6h1M7 7h4M22 7h3M10 8h2M21 8h2M11 9h1\" />";

@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import "./Prefix.sol";
-
 library Face {
     string constant internal NORMAL_EYES_0 = "<path stroke=\"#000000\" d=\"M14 10h3M20 10h3M13 11h1M17 11h1M19 11h1M23 11h1M13 12h1M15 12h1M17 12h1M19 12h1M21 12h1M23 12h1M13 13h1M17 13h1M19 13h1M23 13h1M14 14h3M20 14h3\" /><path stroke=\"#f2f2f2\" d=\"M14 11h3M20 11h3M14 12h1M16 12h1M20 12h1M22 12h1M14 13h3M20 13h3\" />";
     string constant internal NORMAL_EYES_1 = "<path stroke=\"#000000\" d=\"M12 11h5M18 11h5M12 12h1M14 12h1M16 12h1M18 12h1M20 12h1M22 12h1M12 13h1M16 13h1M18 13h1M22 13h1M13 14h3M19 14h3\" /><path stroke=\"#f2f2f2\" d=\"M13 12h1M15 12h1M19 12h1M21 12h1M13 13h3M19 13h3\" />";
