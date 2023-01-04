@@ -25,21 +25,21 @@ library TraitChecker {
             return "Half Pink";
         } else if (_seed >= 46) {
             return "Half Violet";
-        } else if (_seed >= 30) {
+        } else if (_seed >= 32) {
             return "Gradient Pink";
-        } else if (_seed >= 14) {
+        } else if (_seed >= 22) {
             return "Gradient Blue";
-        } else if (_seed >= 10) {
+        } else if (_seed >= 12) {
             return "Spiral Gray";
-        } else if (_seed >= 8) {
+        } else if (_seed >= 10) {
             return "Spiral Red";
-        } else if (_seed >= 6) {
+        } else if (_seed >= 8) {
             return "Spiral Violet";
-        } else if (_seed >= 4) {
+        } else if (_seed >= 6) {
             return "Spiral Green";
-        } else if (_seed >= 2) {
+        } else if (_seed >= 4) {
             return "Polka Dot Blue";
-        } else if (_seed >= 1) {
+        } else if (_seed >= 2) {
             return "Galaxy";
         } else {
             return "Confetti";
