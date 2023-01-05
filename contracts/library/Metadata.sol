@@ -18,8 +18,7 @@ library Metadata {
         );
 
         string memory description = string.concat(
-            "seed : ",
-            Converter.toString(seed)
+            "Blessed Cretures exist in ethereum(BCee) is a collectible NFT project. It is also fully decentralized, and all NFTs' metadata is stored on-chain, not in the cloud or ipfs."
         );
 
         Trait[] memory trait = new Trait[](5);
