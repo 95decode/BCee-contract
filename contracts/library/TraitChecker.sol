@@ -2,164 +2,164 @@
 pragma solidity ^0.8.17;
 
 library TraitChecker {
-    function seedToBackground(uint40 _seed) internal pure returns (string memory) {
-        if (_seed >= 206) {
+    function seedToBackground(uint40 seed) internal pure returns (string memory) {
+        if (seed >= 206) {
             return "None";
-        } else if (_seed >= 190) {
+        } else if (seed >= 190) {
             return "Gray";
-        } else if (_seed >= 174) {
+        } else if (seed >= 174) {
             return "Orange";
-        } else if (_seed >= 158) {
+        } else if (seed >= 158) {
             return "Green";
-        } else if (_seed >= 142) {
+        } else if (seed >= 142) {
             return "Blue";
-        } else if (_seed >= 126) {
+        } else if (seed >= 126) {
             return "Red";
-        } else if (_seed >= 110) {
+        } else if (seed >= 110) {
             return "Sky Blue";
-        } else if (_seed >= 94) {
+        } else if (seed >= 94) {
             return "Violet";
-        } else if (_seed >= 78) {
+        } else if (seed >= 78) {
             return "Half Yellow";
-        } else if (_seed >= 62) {
+        } else if (seed >= 62) {
             return "Half Pink";
-        } else if (_seed >= 46) {
+        } else if (seed >= 46) {
             return "Half Violet";
-        } else if (_seed >= 32) {
+        } else if (seed >= 32) {
             return "Gradient Pink";
-        } else if (_seed >= 22) {
+        } else if (seed >= 22) {
             return "Gradient Blue";
-        } else if (_seed >= 12) {
+        } else if (seed >= 12) {
             return "Spiral Gray";
-        } else if (_seed >= 10) {
+        } else if (seed >= 10) {
             return "Spiral Red";
-        } else if (_seed >= 8) {
+        } else if (seed >= 8) {
             return "Spiral Violet";
-        } else if (_seed >= 6) {
+        } else if (seed >= 6) {
             return "Spiral Green";
-        } else if (_seed >= 4) {
+        } else if (seed >= 4) {
             return "Polka Dot Blue";
-        } else if (_seed >= 2) {
+        } else if (seed >= 2) {
             return "Galaxy";
         } else {
             return "Confetti";
         }
     }
 
-    function seedToBody(uint40 _seed) internal pure returns (string memory) {
-        if (_seed >= 232) {
+    function seedToBody(uint40 seed) internal pure returns (string memory) {
+        if (seed >= 232) {
             return "Beige";
-        } else if (_seed >= 208) {
+        } else if (seed >= 208) {
             return "Yellow";
-        } else if (_seed >= 184) {
+        } else if (seed >= 184) {
             return "White";
-        } else if (_seed >= 160) {
+        } else if (seed >= 160) {
             return "Violet";
-        } else if (_seed >= 136) {
+        } else if (seed >= 136) {
             return "Gray";
-        } else if (_seed >= 112) {
+        } else if (seed >= 112) {
             return "Green";
-        } else if (_seed >= 88) {
+        } else if (seed >= 88) {
             return "Brown";
-        } else if (_seed >= 64) {
+        } else if (seed >= 64) {
             return "Pink";
-        } else if (_seed >= 40) {
+        } else if (seed >= 40) {
             return "Red";
-        } else if (_seed >= 16) {
+        } else if (seed >= 16) {
             return "Purple";
-        } else if (_seed >= 12) {
+        } else if (seed >= 12) {
             return "Mutant";
-        } else if (_seed >= 8) {
+        } else if (seed >= 8) {
             return "Gray Stripes";
-        } else if (_seed >= 4) {
+        } else if (seed >= 4) {
             return "Yellow Stripes";
         } else {
             return "Dark";
         }
     }
 
-    function seedToHead(uint40 _seed) internal pure returns (string memory) {
-        if (_seed >= 206) {
+    function seedToHead(uint40 seed) internal pure returns (string memory) {
+        if (seed >= 206) {
             return "None";
-        } else if (_seed >= 181) {
+        } else if (seed >= 181) {
             return "Thin";
-        } else if (_seed >= 156) {
+        } else if (seed >= 156) {
             return "Perm";
-        } else if (_seed >= 131) {
+        } else if (seed >= 131) {
             return "Cap";
-        } else if (_seed >= 106) {
+        } else if (seed >= 106) {
             return "Bang";
-        } else if (_seed >= 81) {
+        } else if (seed >= 81) {
             return "Yellow perm";
-        } else if (_seed >= 56) {
+        } else if (seed >= 56) {
             return "Rectangle";
-        } else if (_seed >= 46) {
+        } else if (seed >= 46) {
             return "Angel ring";
-        } else if (_seed >= 36) {
+        } else if (seed >= 36) {
             return "Cone";
-        } else if (_seed >= 26) {
+        } else if (seed >= 26) {
             return "Fedora";
-        } else if (_seed >= 16) {
+        } else if (seed >= 16) {
             return "Heart";
-        } else if (_seed >= 6) {
+        } else if (seed >= 6) {
             return "Crown";
         } else {
             return "Clover";
         }
     }
 
-    function seedToFace(uint40 _seed) internal pure returns (string memory) {
-        if (_seed >= 226) {
+    function seedToFace(uint40 seed) internal pure returns (string memory) {
+        if (seed >= 226) {
             return "Normal eyes #0";
-        } else if (_seed >= 196) {
+        } else if (seed >= 196) {
             return "Normal eyes #1";
-        } else if (_seed >= 166) {
+        } else if (seed >= 166) {
             return "Normal eyes #2";
-        } else if (_seed >= 136) {
+        } else if (seed >= 136) {
             return "Blue eyes";
-        } else if (_seed >= 106) {
+        } else if (seed >= 106) {
             return "Injured eyes";
-        } else if (_seed >= 86) {
+        } else if (seed >= 86) {
             return "Mismatched eyes";
-        } else if (_seed >= 66) {
+        } else if (seed >= 66) {
             return "Gray sunglasses";
-        } else if (_seed >= 46) {
+        } else if (seed >= 46) {
             return "3D sunglasses";
-        } else if (_seed >= 26) {
+        } else if (seed >= 26) {
             return "Goggles";
-        } else if (_seed >= 16) {
+        } else if (seed >= 16) {
             return "Error";
-        } else if (_seed >= 6) {
+        } else if (seed >= 6) {
             return "Blue sunglasses";
         } else {
             return "Black eyes";
         }
     }
 
-    function seedToHands(uint40 _seed) internal pure returns (string memory) {
-        if (_seed >= 206) {
+    function seedToHands(uint40 seed) internal pure returns (string memory) {
+        if (seed >= 206) {
             return "None";
-        } else if (_seed >= 181) {
+        } else if (seed >= 181) {
             return "Bar";
-        } else if (_seed >= 156) {
+        } else if (seed >= 156) {
             return "Yellow card";
-        } else if (_seed >= 131) {
+        } else if (seed >= 131) {
             return "Red card";
-        } else if (_seed >= 106) {
+        } else if (seed >= 106) {
             return "Flag";
-        } else if (_seed >= 81) {
+        } else if (seed >= 81) {
             return "Good";
-        } else if (_seed >= 61) {
+        } else if (seed >= 61) {
             return "Sickle";
-        } else if (_seed >= 41) {
+        } else if (seed >= 41) {
             return "Match";
-        } else if (_seed >= 31) {
+        } else if (seed >= 31) {
             return "Briefcase";
-        } else if (_seed >= 21) {
+        } else if (seed >= 21) {
             return "Dagger";
-        } else if (_seed >= 11) {
+        } else if (seed >= 11) {
             return "Hammer";
-        } else if (_seed >= 5) {
+        } else if (seed >= 5) {
             return "Heart";
         } else {
             return "Gun";
