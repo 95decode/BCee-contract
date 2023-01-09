@@ -18,7 +18,11 @@ In this contract, there is no authority such as owner,
 
 and everything is decentralized except for the deployer's primary sale income.
 
+The total supply of NFT is 1000 and can be obtained through primary sale.
+
 Primary sale page is currently hosted [here](https://95decode.github.io/BCee/). (but this page has not been opened yet)
+
+[openSea](https://opensea.io/), [etherscan](https://etherscan.io/) (will be updated)
 
 ``` js
 
