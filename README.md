@@ -1,6 +1,14 @@
 # BCee
 
-BCee
+### Blessed Creatures exist in ethereum
+
+This is my fist NFT project.
+
+All metadata and images of BCee are fully decentralized and all exist in Ethereum.
+
+In this contract, there is no authority such as owner, and everything is decentralized except for the deployer's primary sale income.
+
+Purchase page is currently hosted [here](https://95decode.github.io/BCee/). (but this page has not been opened yet)
 
 ``` js
 
