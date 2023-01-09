@@ -2,8 +2,11 @@
 
 ### Blessed Creatures exist in ethereum
 
-<a href="https://github.com/95decode/BCee-contract/blob/main/images/00.svg"><img src="https://github.com/95decode/BCee-contract/blob/main/images/00.svg" width="160" height="160"/></a>
-<a href="https://github.com/95decode/BCee-contract/blob/main/images/01.svg"><img src="https://github.com/95decode/BCee-contract/blob/main/images/01.svg" width="160" height="160"/></a>
+<a href="https://github.com/95decode/BCee-contract/blob/main/images/00.svg"><img src="https://github.com/95decode/BCee-contract/blob/main/images/00.svg" width="128" height="128"/></a>
+<a href="https://github.com/95decode/BCee-contract/blob/main/images/01.svg"><img src="https://github.com/95decode/BCee-contract/blob/main/images/01.svg" width="128" height="128"/></a>
+<a href="https://github.com/95decode/BCee-contract/blob/main/images/02.svg"><img src="https://github.com/95decode/BCee-contract/blob/main/images/02.svg" width="128" height="128"/></a>
+<a href="https://github.com/95decode/BCee-contract/blob/main/images/03.svg"><img src="https://github.com/95decode/BCee-contract/blob/main/images/03.svg" width="128" height="128"/></a>
+<a href="https://github.com/95decode/BCee-contract/blob/main/images/04.svg"><img src="https://github.com/95decode/BCee-contract/blob/main/images/04.svg" width="128" height="128"/></a>
 
 This is my fist NFT project.
 
