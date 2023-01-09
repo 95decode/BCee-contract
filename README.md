@@ -8,7 +8,7 @@
 <a href="https://github.com/95decode/BCee-contract/blob/main/images/03.svg"><img src="https://github.com/95decode/BCee-contract/blob/main/images/03.svg" width="128" height="128"/></a>
 <a href="https://github.com/95decode/BCee-contract/blob/main/images/04.svg"><img src="https://github.com/95decode/BCee-contract/blob/main/images/04.svg" width="128" height="128"/></a>
 
-This is my first NFT project.
+This is my first pixel PFP NFT project.
 
 All metadata and images of BCee are fully decentralized and all exist in Ethereum.
 
@@ -22,7 +22,7 @@ The total supply of NFT is 1000 and can be obtained through primary sale.
 
 Primary sale page is currently hosted [here](https://95decode.github.io/BCee/). (but this page has not been opened yet)
 
-[openSea](https://opensea.io/), [etherscan](https://etherscan.io/) (will be updated)
+[openSea](https://opensea.io/), [etherscan](https://etherscan.io/) (will be updated soon)
 
 ``` js
 
