@@ -16,21 +16,9 @@ In this contract, there is no authority such as owner,
 
 and everything is decentralized except for the deployer's primary sale income.
 
-Purchase page is currently hosted [here](https://95decode.github.io/BCee/). (but this page has not been opened yet)
+Primary sale page is currently hosted [here](https://95decode.github.io/BCee/). (but this page has not been opened yet)
 
 ``` js
-
-██████╗  ██████╗███████╗███████╗                                          
-██╔══██╗██╔════╝██╔════╝██╔════╝                                          
-██████╔╝██║     █████╗  █████╗                                            
-██╔══██╗██║     ██╔══╝  ██╔══╝                                            
-██████╔╝╚██████╗███████╗███████╗                                          
-╚═════╝  ╚═════╝╚══════╝╚══════╝                                          
-
-
-
-
-
 
 ██████╗ ██╗     ███████╗███████╗███████╗███████╗██████╗                   
 ██╔══██╗██║     ██╔════╝██╔════╝██╔════╝██╔════╝██╔══██╗                  
