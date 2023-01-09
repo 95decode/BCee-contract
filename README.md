@@ -2,6 +2,9 @@
 
 ### Blessed Creatures exist in ethereum
 
+<a href="https://github.com/95decode/BCee-contract/blob/main/images/00.svg"><img src="https://github.com/95decode/BCee-contract/blob/main/images/00.svg" width="160" height="160"/></a>
+<a href="https://github.com/95decode/BCee-contract/blob/main/images/01.svg"><img src="https://github.com/95decode/BCee-contract/blob/main/images/01.svg" width="160" height="160"/></a>
+
 This is my fist NFT project.
 
 All metadata and images of BCee are fully decentralized and all exist in Ethereum.
