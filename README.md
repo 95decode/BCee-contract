@@ -20,9 +20,9 @@ and everything is decentralized except for the deployer's primary sale income.
 
 The total supply of NFT is 1000 and can be obtained through primary sale.
 
-Primary sale page is currently hosted [here](https://95decode.github.io/BCee/). (but this page has not been opened yet)
+Primary sale page is currently hosted [here](https://95decode.github.io/BCee/).
 
-[openSea](https://opensea.io/), [etherscan](https://etherscan.io/) (will be updated soon)
+[openSea](https://opensea.io/collection/blessedcreatures/), [etherscan](https://etherscan.io/address/0xda0154c62ce8b26e1bd52bf8d1b47cc9400ccab4)
 
 ``` js
 
